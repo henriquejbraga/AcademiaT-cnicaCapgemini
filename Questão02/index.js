@@ -1,9 +1,9 @@
-var myInput = document.getElementById("psw");
-var letter = document.getElementById("letter");
-var capital = document.getElementById("capital");
-var number = document.getElementById("number");
-var special = document.getElementById("special");
-var length = document.getElementById("length");
+let myInput = document.getElementById("psw");
+let letter = document.getElementById("letter");
+let capital = document.getElementById("capital");
+let number = document.getElementById("number");
+let special = document.getElementById("special");
+let length = document.getElementById("length");
 
 myInput.onfocus = function () {
   document.getElementById("message").style.display = "block";
@@ -14,7 +14,7 @@ myInput.onblur = function () {
 }
 
 myInput.onkeyup = function () {
-  var lowerCaseLetters = /[a-z]/g;
+  let lowerCaseLetters = /[a-z]/g;
   if (myInput.value.match(lowerCaseLetters)) {
     letter.classList.remove("invalid");
     letter.classList.add("valid");
@@ -23,7 +23,7 @@ myInput.onkeyup = function () {
     letter.classList.add("invalid");
   }
 
-  var upperCaseLetters = /[A-Z]/g;
+  let upperCaseLetters = /[A-Z]/g;
   if (myInput.value.match(upperCaseLetters)) {
     capital.classList.remove("invalid");
     capital.classList.add("valid");
@@ -32,7 +32,7 @@ myInput.onkeyup = function () {
     capital.classList.add("invalid");
   }
 
-  var numbers = /[0-9]/g;
+  let numbers = /[0-9]/g;
   if (myInput.value.match(numbers)) {
     number.classList.remove("invalid");
     number.classList.add("valid");
@@ -41,7 +41,7 @@ myInput.onkeyup = function () {
     number.classList.add("invalid");
   }
 
-  var specials = /(?=.*[!@#$%&*()-+])/g;
+  let specials = /(?=.*[!@#$%&*()-+])/g;
   if (myInput.value.match(specials)) {
     special.classList.remove("invalid");
     special.classList.add("valid");
