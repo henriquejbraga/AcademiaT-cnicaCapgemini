@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript password validation</title>
+  <link rel='stylesheet' href='index.css' type='text/css' />
+</head>
+
+<body>
+  <div class="container">
+    <form action="/action_page.php">
+      <label for="usrname">Nome</label>
+      <input type="text" id="usrname" name="usrname" required>
+
+      <label for="psw">Senha</label>
+      <input type="password" id="psw" name="psw" title="Precisa atender aos requisitos" required>
+
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+
+  <div id="message">
+    <h3>A senha precisa conter:</h3>
+    <p id="letter" class="invalid">Uma letra minúscula </p>
+    <p id="capital" class="invalid">Uma letra maiúscula</p>
+    <p id="number" class="invalid">Um dígito</p>
+    <p id="special" class="invalid">Um caracter especial</p>
+    <p id="length" class="invalid">Mínimo 6 caracteres</p>
+  </div>
+  <script src="./index.js"></script>
+</body>
